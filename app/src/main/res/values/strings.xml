@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Museum</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="expo1Name">expo1Name</string>
+    <string name="expo2Name">expo2Name</string>
+    <string name="expo3Name">expo3Name</string>
+    <string name="expo4Name">expo4Name</string>
+    <string name="expo5Name">expo5Name</string>
+    <string name="expo6Name">expo6Name</string>
+    <string name="expo7Name">expo7Name</string>
+    <string name="expo8Name">expo8Name</string>
+    <string name="expo9Name">expo9Name</string>
+    <string name="expo10Name">expo10Name</string>
+    <string name="expo11Name">expo11Name</string>
+    <string name="expo12Name">expo12Name</string>
+
+    <string name="expo1Text">expo1Text</string>
+    <string name="expo2Text">expo2Text</string>
+    <string name="expo3Text">expo3Text</string>
+    <string name="expo4Text">expo4Text</string>
+    <string name="expo5Text">expo5Text</string>
+    <string name="expo6Text">expo6Text</string>
+    <string name="expo7Text">expo7Text</string>
+    <string name="expo8Text">expo8Text</string>
+    <string name="expo9Text">expo9Text</string>
+    <string name="expo10Text">expo10Text</string>
+    <string name="expo11Text">expo11Text</string>
+    <string name="expo12Text">expo12Text</string>
+
+    <string name="image_back">Image Back</string>
+</resources>

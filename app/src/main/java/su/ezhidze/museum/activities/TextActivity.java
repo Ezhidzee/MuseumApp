@@ -190,7 +190,7 @@ public class TextActivity extends AppCompatActivity {
     public void setAnimation() {
         if (Build.VERSION.SDK_INT > 20) {
             Fade fade = new Fade();
-            fade.setDuration(800);
+            fade.setDuration(500);
             fade.setInterpolator(new DecelerateInterpolator());
             getWindow().setExitTransition(fade);
             getWindow().setEnterTransition(fade);

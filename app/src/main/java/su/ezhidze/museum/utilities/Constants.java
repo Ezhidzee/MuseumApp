@@ -8,7 +8,7 @@ import java.util.Map;
 public class Constants {
     public static final String KEY_PREFERENCE_NAME = "museumAppPreference";
 
-    public static final String[] TITLES = {"MAP"};
+    public static final String[] TITLES = {"Карта", "О музее", "Контакты", "О проекте"};
 
     public static final Map<String, String> EXPOs_ID = Map.ofEntries(
             entry("#A17BA3", "1"),

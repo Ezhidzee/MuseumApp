@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        binding.toolbar.setTitle("Museum");
+        binding.toolbar.setTitle("Музей блокады Ленинграда");
 
         preferenceManager = new PreferenceManager(getApplicationContext());
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     public void setAnimation() {
         if (Build.VERSION.SDK_INT > 20) {
             Fade fade = new Fade();
-            fade.setDuration(800);
+            fade.setDuration(500);
             fade.setInterpolator(new DecelerateInterpolator());
             getWindow().setExitTransition(fade);
             getWindow().setEnterTransition(fade);

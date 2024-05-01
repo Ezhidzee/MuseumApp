@@ -58,9 +58,9 @@ public class MapFragment extends Fragment {
     private void init() {
         preferenceManager = new PreferenceManager(getActivity().getApplicationContext());
         Animation inAnimation = new AlphaAnimation(0, 1);
-        inAnimation.setDuration(800);
+        inAnimation.setDuration(500);
         Animation outAnimation = new AlphaAnimation(1, 0);
-        outAnimation.setDuration(800);
+        outAnimation.setDuration(500);
         binding.imageSwitcher.setInAnimation(inAnimation);
         binding.imageSwitcher.setOutAnimation(outAnimation);
     }

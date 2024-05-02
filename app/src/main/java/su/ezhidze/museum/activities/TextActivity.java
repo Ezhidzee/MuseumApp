@@ -4,10 +4,7 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
-import android.transition.Explode;
 import android.transition.Fade;
-import android.transition.Slide;
-import android.view.Gravity;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Toast;
@@ -15,7 +12,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import su.ezhidze.museum.R;
 import su.ezhidze.museum.databinding.ActivityTextBinding;
@@ -44,51 +43,66 @@ public class TextActivity extends AppCompatActivity {
         switch (preferenceManager.getString(Constants.EXPO_ID)) {
             case "1":
                 binding.textData.setText(R.string.expo1Text);
-                binding.textName.setText(R.string.expo1Text);
+                binding.textName.setText(R.string.expo1Name);
                 break;
             case "2":
                 binding.textData.setText(R.string.expo2Text);
-                binding.textName.setText(R.string.expo2Text);
+                binding.textName.setText(R.string.expo2Name);
                 break;
             case "3":
                 binding.textData.setText(R.string.expo3Text);
-                binding.textName.setText(R.string.expo3Text);
+                binding.textName.setText(R.string.expo3Name);
                 break;
             case "4":
                 binding.textData.setText(R.string.expo4Text);
-                binding.textName.setText(R.string.expo4Text);
+                binding.textName.setText(R.string.expo4Name);
                 break;
             case "5":
                 binding.textData.setText(R.string.expo5Text);
-                binding.textName.setText(R.string.expo5Text);
+                binding.textName.setText(R.string.expo5Name);
                 break;
             case "6":
                 binding.textData.setText(R.string.expo6Text);
-                binding.textName.setText(R.string.expo6Text);
+                binding.textName.setText(R.string.expo6Name);
                 break;
             case "7":
                 binding.textData.setText(R.string.expo7Text);
-                binding.textName.setText(R.string.expo7Text);
+                binding.textName.setText(R.string.expo7Name);
                 break;
             case "8":
-                binding.textData.setText(R.string.expo8Text);
-                binding.textName.setText(R.string.expo8Text);
+                StringBuilder termsString = new StringBuilder();
+                BufferedReader reader;
+                try {
+                    reader = new BufferedReader(
+                            new InputStreamReader(getResources().openRawResource(R.raw.expo8_text)));
+
+                    String str;
+                    while ((str = reader.readLine()) != null) {
+                        termsString.append(str + '\n');
+                    }
+
+                    reader.close();
+                    binding.textData.setText(termsString.toString());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                binding.textName.setText(R.string.expo8Name);
                 break;
             case "9":
                 binding.textData.setText(R.string.expo9Text);
-                binding.textName.setText(R.string.expo9Text);
+                binding.textName.setText(R.string.expo9Name);
                 break;
             case "10":
                 binding.textData.setText(R.string.expo10Text);
-                binding.textName.setText(R.string.expo10Text);
+                binding.textName.setText(R.string.expo10Name);
                 break;
             case "11":
                 binding.textData.setText(R.string.expo11Text);
-                binding.textName.setText(R.string.expo11Text);
+                binding.textName.setText(R.string.expo11Name);
                 break;
             case "12":
                 binding.textData.setText(R.string.expo12Text);
-                binding.textName.setText(R.string.expo12Text);
+                binding.textName.setText(R.string.expo12Name);
                 break;
         }
 

@@ -25,6 +25,8 @@
         </activity>
 
         <activity android:name=".activities.TextActivity" />
+
+        <activity android:name=".activities.SectionsActivity" />
     </application>
 
 </manifest>

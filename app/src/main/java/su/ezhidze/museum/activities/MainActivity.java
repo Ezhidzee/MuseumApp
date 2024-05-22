@@ -1,34 +1,20 @@
 package su.ezhidze.museum.activities;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.transition.Explode;
 import android.transition.Fade;
-import android.transition.Slide;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.Menu;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.navigation.ui.AppBarConfiguration;
+
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-
-import su.ezhidze.museum.R;
 import su.ezhidze.museum.adapters.MainActivityViewPagerFragmentsAdapter;
 import su.ezhidze.museum.databinding.ActivityMainBinding;
+import su.ezhidze.museum.models.Section;
 import su.ezhidze.museum.utilities.Constants;
 import su.ezhidze.museum.utilities.PreferenceManager;
 
@@ -60,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         new TabLayoutMediator(binding.tabLayout, binding.viewPager, (tab, position) -> {
             tab.setText(Constants.TITLES[position]);
         }).attach();
+        if (savedInstanceState == null) init();
     }
 
     public void setAnimation() {
@@ -74,5 +61,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void init() {
+        for (int i = 0; i < Constants.EXPO6_SECTIONS.size(); ++i)
+            Constants.expo6Sections.add(new Section(getResources().getString(Constants.EXPO6_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO6_SECTIONS.get(i).component2()), Constants.EXPO6_AUDIOS.get(i)));
+        for (int i = 0; i < Constants.EXPO7_SECTIONS.size(); ++i)
+            Constants.expo7Sections.add(new Section(getResources().getString(Constants.EXPO7_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO7_SECTIONS.get(i).component2()), Constants.EXPO7_AUDIOS.get(i)));
+        for (int i = 0; i < Constants.EXPO8_SECTIONS.size(); ++i)
+            Constants.expo8Sections.add(new Section(getResources().getString(Constants.EXPO8_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO8_SECTIONS.get(i).component2()), Constants.EXPO8_AUDIOS.get(i)));
+        for (int i = 0; i < Constants.EXPO10_SECTIONS.size(); ++i)
+            Constants.expo10Sections.add(new Section(getResources().getString(Constants.EXPO10_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO10_SECTIONS.get(i).component2()), Constants.EXPO10_AUDIOS.get(i)));
     }
 }

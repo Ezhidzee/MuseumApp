@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -23,8 +21,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import su.ezhidze.museum.R;
+import su.ezhidze.museum.activities.SectionsActivity;
 import su.ezhidze.museum.activities.TextActivity;
 import su.ezhidze.museum.databinding.FragmentMapBinding;
+import su.ezhidze.museum.models.Section;
 import su.ezhidze.museum.utilities.Constants;
 import su.ezhidze.museum.utilities.PreferenceManager;
 
@@ -87,13 +87,18 @@ public class MapFragment extends Fragment {
 
             if (Constants.EXPOs_ID.get(String.format("#%02x%02x%02x", Color.red(currPixel), Color.green(currPixel), Color.blue(currPixel)).toUpperCase()) != null) {
                 preferenceManager.putString(Constants.EXPO_ID, Constants.EXPOs_ID.get(String.format("#%02x%02x%02x", Color.red(currPixel), Color.green(currPixel), Color.blue(currPixel)).toUpperCase()));
-                Intent i = new Intent(getContext(), TextActivity.class);
-                if (Build.VERSION.SDK_INT > 20) {
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity());
-                    startActivity(i, options.toBundle());
+                int sectionId = Integer.valueOf(preferenceManager.getString(Constants.EXPO_ID));
+                Intent i;
+                if (sectionId == 6 || sectionId == 7 || sectionId == 8 || sectionId == 10) {
+                    i = new Intent(getContext(), SectionsActivity.class);
                 } else {
-                    startActivity(i);
+                    i = new Intent(getContext(), TextActivity.class);
+                    i.putExtra(Constants.KEY_SECTION, new Section(getResources().getString(Constants.EXPOs_NAMES.get(preferenceManager.getString(Constants.EXPO_ID))),
+                            getResources().getString(Constants.EXPOs_TEXTS.get(preferenceManager.getString(Constants.EXPO_ID))),
+                            Constants.EXPOs_AUDIOS.get(preferenceManager.getString(Constants.EXPO_ID))));
                 }
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity());
+                startActivity(i, options.toBundle());
             }
 
             Log.d("Coordinates", String.format("#%02x%02x%02x", Color.red(currPixel), Color.green(currPixel), Color.blue(currPixel)).toUpperCase() + " Pixel is: " + currPixel);

@@ -24,23 +24,26 @@
 
     <TextView
         android:id="@+id/textName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_65sdp"
         android:textColor="@color/white"
-        android:textSize="@dimen/_18sdp"
+        android:autoSizeTextType="uniform"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/imageBack"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/imageBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageBack" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textFrame" />
 
     <FrameLayout
+        android:id="@+id/textFrame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_16sdp"
         android:background="@drawable/background_content_bottom"
-        android:paddingLeft="@dimen/_3sdp"
+        android:paddingLeft="@dimen/_5sdp"
         android:paddingTop="@dimen/_20sdp"
         android:paddingRight="@dimen/_3sdp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +55,7 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:textColor="@color/black"
-            android:textSize="@dimen/_16sdp"
+            android:textSize="@dimen/_18sdp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/imageBack"
             app:layout_constraintEnd_toEndOf="parent"

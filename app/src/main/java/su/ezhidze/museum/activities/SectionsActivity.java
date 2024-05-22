@@ -2,8 +2,11 @@ package su.ezhidze.museum.activities;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.Fade;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,6 +34,7 @@ public class SectionsActivity extends AppCompatActivity implements SectionListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySectionsBinding.inflate(getLayoutInflater());
+        setAnimation();
         setContentView(binding.getRoot());
 
         init();
@@ -82,5 +86,15 @@ public class SectionsActivity extends AppCompatActivity implements SectionListen
         i.putExtra(Constants.KEY_SECTION, section);
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         startActivity(i, options.toBundle());
+    }
+
+    public void setAnimation() {
+        if (Build.VERSION.SDK_INT > 20) {
+            Fade fade = new Fade();
+            fade.setDuration(500);
+            fade.setInterpolator(new DecelerateInterpolator());
+            getWindow().setExitTransition(fade);
+            getWindow().setEnterTransition(fade);
+        }
     }
 }

@@ -65,14 +65,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         for (int i = 0; i < Constants.EXPO6_SECTIONS.size(); ++i)
-            Constants.expo6Sections.add(new Section(getResources().getString(Constants.EXPO6_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO6_SECTIONS.get(i).component2()), Constants.EXPO6_AUDIOS.get(i)));
+            Constants.expo6Sections.add(new Section(getResources().getString(Constants.EXPO6_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO6_SECTIONS.get(i).component2()), Constants.EXPO6_AUDIOS.get(i), Constants.EXPO6_IMAGES.get(i)));
         for (int i = 0; i < Constants.EXPO7_SECTIONS.size(); ++i)
-            Constants.expo7Sections.add(new Section(getResources().getString(Constants.EXPO7_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO7_SECTIONS.get(i).component2()), Constants.EXPO7_AUDIOS.get(i)));
+            Constants.expo7Sections.add(new Section(getResources().getString(Constants.EXPO7_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO7_SECTIONS.get(i).component2()), Constants.EXPO7_AUDIOS.get(i), Constants.EXPO7_IMAGES.get(i)));
         for (int i = 0; i < Constants.EXPO8_SECTIONS.size(); ++i)
-            Constants.expo8Sections.add(new Section(getResources().getString(Constants.EXPO8_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO8_SECTIONS.get(i).component2()), Constants.EXPO8_AUDIOS.get(i)));
+            Constants.expo8Sections.add(new Section(getResources().getString(Constants.EXPO8_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO8_SECTIONS.get(i).component2()), Constants.EXPO8_AUDIOS.get(i), Constants.EXPO8_IMAGES.get(i)));
         for (int i = 0; i < Constants.EXPO9_SECTIONS.size(); ++i)
-            Constants.expo9Sections.add(new Section(getResources().getString(Constants.EXPO9_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO9_SECTIONS.get(i).component2()), Constants.EXPO9_AUDIOS.get(i)));
+            Constants.expo9Sections.add(new Section(getResources().getString(Constants.EXPO9_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO9_SECTIONS.get(i).component2()), Constants.EXPO9_AUDIOS.get(i), Constants.EXPO9_IMAGES.get(i)));
         for (int i = 0; i < Constants.EXPO10_SECTIONS.size(); ++i)
-            Constants.expo10Sections.add(new Section(getResources().getString(Constants.EXPO10_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO10_SECTIONS.get(i).component2()), Constants.EXPO10_AUDIOS.get(i)));
+            Constants.expo10Sections.add(new Section(getResources().getString(Constants.EXPO10_SECTIONS.get(i).component1()), getResources().getString(Constants.EXPO10_SECTIONS.get(i).component2()), Constants.EXPO10_AUDIOS.get(i), Constants.EXPO10_IMAGES.get(i)));
     }
 }

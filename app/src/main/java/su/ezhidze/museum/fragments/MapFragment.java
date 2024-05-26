@@ -95,7 +95,7 @@ public class MapFragment extends Fragment {
                     i = new Intent(getContext(), TextActivity.class);
                     i.putExtra(Constants.KEY_SECTION, new Section(getResources().getString(Constants.EXPOs_NAMES.get(preferenceManager.getString(Constants.EXPO_ID))),
                             getResources().getString(Constants.EXPOs_TEXTS.get(preferenceManager.getString(Constants.EXPO_ID))),
-                            Constants.EXPOs_AUDIOS.get(preferenceManager.getString(Constants.EXPO_ID))));
+                            Constants.EXPOs_AUDIOS.get(preferenceManager.getString(Constants.EXPO_ID)), Constants.EXPOs_IMAGES.get(preferenceManager.getString(Constants.EXPO_ID))));
                 }
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity());
                 startActivity(i, options.toBundle());

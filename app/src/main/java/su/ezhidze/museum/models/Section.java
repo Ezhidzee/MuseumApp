@@ -10,10 +10,13 @@ public class Section implements Serializable {
 
     private Integer audioResourceId;
 
-    public Section(String name, String text, Integer audioResourceId) {
+    private Integer imageId;
+
+    public Section(String name, String text, Integer audioResourceId, Integer imageId) {
         this.name = name;
         this.text = text;
         this.audioResourceId = audioResourceId;
+        this.imageId = imageId;
     }
 
     public String getName() {
@@ -38,5 +41,13 @@ public class Section implements Serializable {
 
     public void setAudioResourceId(Integer audioResourceId) {
         this.audioResourceId = audioResourceId;
+    }
+
+    public Integer getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
     }
 }

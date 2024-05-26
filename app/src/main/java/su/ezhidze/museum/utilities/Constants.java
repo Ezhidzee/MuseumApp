@@ -153,4 +153,48 @@ public class Constants {
     public static List<Section> expo9Sections = new ArrayList<>();
 
     public static List<Section> expo10Sections = new ArrayList<>();
+
+    public static final Map<String, Integer> EXPOs_IMAGES = Map.ofEntries(
+            entry("1", 0),
+            entry("2", 0),
+            entry("3", 0),
+            entry("4", R.drawable.expo4),
+            entry("5", 0),
+            entry("11", 0),
+            entry("12", 0)
+    );
+
+    public static final List<Integer> EXPO6_IMAGES = Arrays.asList(
+            R.drawable.expo6,
+            R.drawable.expo6_1,
+            R.drawable.expo6_2,
+            0,
+            R.drawable.expo6_4,
+            0);
+
+    public static final List<Integer> EXPO7_IMAGES = Arrays.asList(
+            R.drawable.expo7_1,
+            0,
+            R.drawable.expo7_3,
+            0);
+
+    public static final List<Integer> EXPO8_IMAGES = Arrays.asList(
+            R.drawable.expo8_1,
+            R.drawable.expo8_2,
+            R.drawable.expo8_3,
+            R.drawable.expo8_4,
+            R.drawable.expo8_5,
+            R.drawable.expo8_6,
+            0,
+            0);
+
+    public static final List<Integer> EXPO9_IMAGES = Arrays.asList(
+            0,
+            0,
+            R.drawable.expo9_3,
+            R.drawable.expo9_4);
+
+    public static final List<Integer> EXPO10_IMAGES = Arrays.asList(
+            0,
+            0);
 }

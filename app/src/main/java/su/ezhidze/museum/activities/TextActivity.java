@@ -45,6 +45,10 @@ public class TextActivity extends AppCompatActivity {
         section = (Section) getIntent().getSerializableExtra(Constants.KEY_SECTION);
         binding.textName.setText(section.getName());
         binding.textData.setText(section.getText());
+        if (section.getImageId() != 0) {
+            binding.imageView1.setImageResource(section.getImageId());
+            binding.imageView1.setVisibility(View.VISIBLE);
+        }
         mediaPlayer = MediaPlayer.create(getApplicationContext(), section.getAudioResourceId());
         setListeners();
     }

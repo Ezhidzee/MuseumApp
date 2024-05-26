@@ -89,7 +89,7 @@ public class MapFragment extends Fragment {
                 preferenceManager.putString(Constants.EXPO_ID, Constants.EXPOs_ID.get(String.format("#%02x%02x%02x", Color.red(currPixel), Color.green(currPixel), Color.blue(currPixel)).toUpperCase()));
                 int sectionId = Integer.valueOf(preferenceManager.getString(Constants.EXPO_ID));
                 Intent i;
-                if (sectionId == 6 || sectionId == 7 || sectionId == 8 || sectionId == 10) {
+                if (sectionId == 6 || sectionId == 7 || sectionId == 8 || sectionId == 9 || sectionId == 10) {
                     i = new Intent(getContext(), SectionsActivity.class);
                 } else {
                     i = new Intent(getContext(), TextActivity.class);

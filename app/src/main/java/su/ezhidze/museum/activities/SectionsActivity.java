@@ -53,6 +53,9 @@ public class SectionsActivity extends AppCompatActivity implements SectionListen
             case "8":
                 sectionList = Constants.expo8Sections;
                 break;
+            case "9":
+                sectionList = Constants.expo9Sections;
+                break;
             case "10":
                 sectionList = Constants.expo10Sections;
                 break;
@@ -72,6 +75,9 @@ public class SectionsActivity extends AppCompatActivity implements SectionListen
                 break;
             case "8":
                 binding.title.setText(R.string.expo8Name);
+                break;
+            case "9":
+                binding.title.setText(R.string.expo9Name);
                 break;
             case "10":
                 binding.title.setText(R.string.expo10Name);

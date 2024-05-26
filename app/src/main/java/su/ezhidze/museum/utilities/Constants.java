@@ -48,7 +48,6 @@ public class Constants {
             entry("3", R.string.expo3Name),
             entry("4", R.string.expo4Name),
             entry("5", R.string.expo5Name),
-            entry("9", R.string.expo9Name),
             entry("11", R.string.expo11Name),
             entry("12", R.string.expo12Name)
     );
@@ -59,7 +58,6 @@ public class Constants {
             entry("3", R.string.expo3Text),
             entry("4", R.string.expo4Text),
             entry("5", R.string.expo5Text),
-            entry("9", R.string.expo9Text),
             entry("11", R.string.expo11Text),
             entry("12", R.string.expo12Text)
     );
@@ -88,13 +86,18 @@ public class Constants {
             new Pair<>(R.string.expo8_7Name, R.string.expo8_7Text),
             new Pair<>(R.string.expo8_8Name, R.string.expo8_8Text));
 
+    public static final List<Pair<Integer, Integer>> EXPO9_SECTIONS = Arrays.asList(
+            new Pair<>(R.string.expo9_1Name, R.string.expo9_1Text),
+            new Pair<>(R.string.expo9_2Name, R.string.expo9_2Text),
+            new Pair<>(R.string.expo9_3Name, R.string.expo9_3Text),
+            new Pair<>(R.string.expo9_4Name, R.string.expo9_4Text));
+
     public static final Map<String, Integer> EXPOs_AUDIOS = Map.ofEntries(
             entry("1", R.raw.expo1),
             entry("2", R.raw.expo2),
             entry("3", R.raw.expo3),
             entry("4", R.raw.expo4),
             entry("5", R.raw.expo5),
-            entry("9", R.raw.expo9),
             entry("11", R.raw.expo11),
             entry("12", R.raw.expo12)
     );
@@ -123,6 +126,12 @@ public class Constants {
             R.raw.expo8_7,
             R.raw.expo8_8);
 
+    public static final List<Integer> EXPO9_AUDIOS = Arrays.asList(
+            R.raw.expo9_1,
+            R.raw.expo9_2,
+            R.raw.expo9_3,
+            R.raw.expo9_4);
+
     public static final List<Integer> EXPO10_AUDIOS = Arrays.asList(
             R.raw.expo10_1,
             R.raw.expo10_2);
@@ -130,13 +139,6 @@ public class Constants {
     public static final List<Pair<Integer, Integer>> EXPO10_SECTIONS = Arrays.asList(
             new Pair<>(R.string.expo10_1Name, R.string.expo10_1Text),
             new Pair<>(R.string.expo10_2Name, R.string.expo10_2Text));
-
-    public static final Map<Integer, Integer> EXPOs_Sections_Counts = Map.ofEntries(
-            entry(6, 6),
-            entry(7, 4),
-            entry(8, 10),
-            entry(10, 2)
-    );
 
     public static final String EXPO_ID = "expo_id";
 
@@ -147,6 +149,8 @@ public class Constants {
     public static List<Section> expo7Sections = new ArrayList<>();
 
     public static List<Section> expo8Sections = new ArrayList<>();
+
+    public static List<Section> expo9Sections = new ArrayList<>();
 
     public static List<Section> expo10Sections = new ArrayList<>();
 }
